@@ -1,0 +1,60 @@
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll.config
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.dll
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.xml
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.csprojResolveAssemblyReference.cache
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll.config
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.dll
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.xml
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.csprojResolveAssemblyReference.cache
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll.config
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.dll
+C:\Users\Administrator\Documents\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll.config
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.dll
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.xml
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.csprojResolveAssemblyReference.cache
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\Point of Sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll.config
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.dll
+C:\Users\Administrator\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll.config
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.dll
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\bin\Debug\EntityFramework.xml
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.csprojResolveAssemblyReference.cache
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\point-of-sale\Punto de Venta\PuntoDeVenta.Library\obj\Debug\PuntoDeVenta.Library.pdb

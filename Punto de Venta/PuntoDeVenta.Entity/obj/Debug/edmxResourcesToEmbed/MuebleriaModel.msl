@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MuebleriaDBModelStoreContainer" CdmEntityContainer="MuebleriaDBEntities">
+    <FunctionImportMapping FunctionImportName="ACTIVEUSER" FunctionName="MuebleriaDBModel.Store.ACTIVEUSER" />
+    <FunctionImportMapping FunctionImportName="INACTIVEUSER" FunctionName="MuebleriaDBModel.Store.INACTIVEUSER" />
+    <FunctionImportMapping FunctionImportName="PRODUCT_SOLD" FunctionName="MuebleriaDBModel.Store.PRODUCT_SOLD" />
+    <EntitySetMapping Name="TBL_CLIENTES">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_CLIENTES">
+        <MappingFragment StoreEntitySet="TBL_CLIENTES">
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="RNC" ColumnName="RNC" />
+          <ScalarProperty Name="CedulaCliente" ColumnName="CedulaCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_CUENTAS_X_PAGAR">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_CUENTAS_X_PAGAR">
+        <MappingFragment StoreEntitySet="TBL_CUENTAS_X_PAGAR">
+          <ScalarProperty Name="FechaDeuda" ColumnName="FechaDeuda" />
+          <ScalarProperty Name="EstadoDeuda" ColumnName="EstadoDeuda" />
+          <ScalarProperty Name="NombreDeudor" ColumnName="NombreDeudor" />
+          <ScalarProperty Name="DeudorID" ColumnName="DeudorID" />
+          <ScalarProperty Name="MontoAPagar" ColumnName="MontoAPagar" />
+          <ScalarProperty Name="ConceptoDeuda" ColumnName="ConceptoDeuda" />
+          <ScalarProperty Name="CxPID" ColumnName="CxPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_DEUDORES">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_DEUDORES">
+        <MappingFragment StoreEntitySet="TBL_DEUDORES">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NombreContacto" ColumnName="NombreContacto" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="DeudorID" ColumnName="DeudorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_FACTURA_DETALLE">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_FACTURA_DETALLE">
+        <MappingFragment StoreEntitySet="TBL_FACTURA_DETALLE">
+          <ScalarProperty Name="PrecioConDescuento" ColumnName="PrecioConDescuento" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="PrecioPorCantidad" ColumnName="PrecioPorCantidad" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="CodigoDeBarra" ColumnName="CodigoDeBarra" />
+          <ScalarProperty Name="FacturaID" ColumnName="FacturaID" />
+          <ScalarProperty Name="DetalleID" ColumnName="DetalleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_FACTURAS">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_FACTURAS">
+        <MappingFragment StoreEntitySet="TBL_FACTURAS">
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="CedulaCliente" ColumnName="CedulaCliente" />
+          <ScalarProperty Name="TotalEnFactura" ColumnName="TotalEnFactura" />
+          <ScalarProperty Name="FechaFactura" ColumnName="FechaFactura" />
+          <ScalarProperty Name="FacturaID" ColumnName="FacturaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_PRODUCTOS">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_PRODUCTOS">
+        <MappingFragment StoreEntitySet="TBL_PRODUCTOS">
+          <ScalarProperty Name="FechaDeCompra" ColumnName="FechaDeCompra" />
+          <ScalarProperty Name="PrecioDeLista" ColumnName="PrecioDeLista" />
+          <ScalarProperty Name="SuplidorNombre" ColumnName="SuplidorNombre" />
+          <ScalarProperty Name="FechaDeIngreso" ColumnName="FechaDeIngreso" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Descontinuado" ColumnName="Descontinuado" />
+          <ScalarProperty Name="UnidadesEnAlmacen" ColumnName="UnidadesEnAlmacen" />
+          <ScalarProperty Name="PrecioPorUnidad" ColumnName="PrecioPorUnidad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ProductoNombre" ColumnName="ProductoNombre" />
+          <ScalarProperty Name="SuplidorID" ColumnName="SuplidorID" />
+          <ScalarProperty Name="CodigoDeBarra" ColumnName="CodigoDeBarra" />
+          <ScalarProperty Name="ProductoID" ColumnName="ProductoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SUPLIDORES">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_SUPLIDORES">
+        <MappingFragment StoreEntitySet="TBL_SUPLIDORES">
+          <ScalarProperty Name="PaginaWeb" ColumnName="PaginaWeb" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TipoNombre" ColumnName="TipoNombre" />
+          <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+          <ScalarProperty Name="TituloDeContacto" ColumnName="TituloDeContacto" />
+          <ScalarProperty Name="TelefonoDeContacto" ColumnName="TelefonoDeContacto" />
+          <ScalarProperty Name="NombreDeContacto" ColumnName="NombreDeContacto" />
+          <ScalarProperty Name="NumeroTelefono" ColumnName="NumeroTelefono" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="NombreSuplidor" ColumnName="NombreSuplidor" />
+          <ScalarProperty Name="SuplidorID" ColumnName="SuplidorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TIPOSUPLIDORES">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_TIPOSUPLIDORES">
+        <MappingFragment StoreEntitySet="TBL_TIPOSUPLIDORES">
+          <ScalarProperty Name="NombreTipo" ColumnName="NombreTipo" />
+          <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USUARIOS">
+      <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_USUARIOS">
+        <MappingFragment StoreEntitySet="TBL_USUARIOS">
+          <ScalarProperty Name="ActivoAhora" ColumnName="ActivoAhora" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaDeCreacion" ColumnName="FechaDeCreacion" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

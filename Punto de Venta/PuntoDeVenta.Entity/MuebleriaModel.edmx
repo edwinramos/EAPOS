@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MuebleriaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="TBL_CLIENTES">
+          <Key>
+            <PropertyRef Name="CedulaCliente" />
+          </Key>
+          <Property Name="CedulaCliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RNC" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NombreCompleto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Direccion" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_CUENTAS_X_PAGAR">
+          <Key>
+            <PropertyRef Name="CxPID" />
+          </Key>
+          <Property Name="CxPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConceptoDeuda" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MontoAPagar" Type="money" Nullable="false" />
+          <Property Name="DeudorID" Type="int" Nullable="false" />
+          <Property Name="NombreDeudor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EstadoDeuda" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaDeuda" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_DEUDORES">
+          <Key>
+            <PropertyRef Name="DeudorID" />
+          </Key>
+          <Property Name="DeudorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreCompleto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NombreContacto" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBL_FACTURA_DETALLE">
+          <Key>
+            <PropertyRef Name="DetalleID" />
+          </Key>
+          <Property Name="DetalleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FacturaID" Type="int" Nullable="false" />
+          <Property Name="CodigoDeBarra" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NombreProducto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
+          <Property Name="PrecioPorCantidad" Type="money" Nullable="false" />
+          <Property Name="Descuento" Type="money" Nullable="false" />
+          <Property Name="PrecioConDescuento" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_FACTURAS">
+          <Key>
+            <PropertyRef Name="FacturaID" />
+          </Key>
+          <Property Name="FacturaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaFactura" Type="datetime" Nullable="false" />
+          <Property Name="TotalEnFactura" Type="money" Nullable="false" />
+          <Property Name="CedulaCliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UsuarioID" Type="int" Nullable="false" />
+          <Property Name="NombreCliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NombreUsuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_PRODUCTOS">
+          <Key>
+            <PropertyRef Name="ProductoID" />
+          </Key>
+          <Property Name="ProductoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodigoDeBarra" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="SuplidorID" Type="int" Nullable="false" />
+          <Property Name="ProductoNombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PrecioPorUnidad" Type="money" Nullable="false" />
+          <Property Name="UnidadesEnAlmacen" Type="int" Nullable="false" />
+          <Property Name="Descontinuado" Type="int" Nullable="false" />
+          <Property Name="Marca" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaDeIngreso" Type="datetime" Nullable="false" />
+          <Property Name="SuplidorNombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrecioDeLista" Type="money" Nullable="false" />
+          <Property Name="FechaDeCompra" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TBL_SUPLIDORES">
+          <Key>
+            <PropertyRef Name="SuplidorID" />
+          </Key>
+          <Property Name="SuplidorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreSuplidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ciudad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NumeroTelefono" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NombreDeContacto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TelefonoDeContacto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TituloDeContacto" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TipoID" Type="int" Nullable="false" />
+          <Property Name="TipoNombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaginaWeb" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBL_TIPOSUPLIDORES">
+          <Key>
+            <PropertyRef Name="TipoID" />
+          </Key>
+          <Property Name="TipoID" Type="int" Nullable="false" />
+          <Property Name="NombreTipo" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_USUARIOS">
+          <Key>
+            <PropertyRef Name="UsuarioID" />
+          </Key>
+          <Property Name="UsuarioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreUsuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contraseña" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaDeCreacion" Type="datetime" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Apellido" Type="nvarchar" MaxLength="50" />
+          <Property Name="ActivoAhora" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES">
+          <End Role="TBL_DEUDORES" Type="Self.TBL_DEUDORES" Multiplicity="1" />
+          <End Role="TBL_CUENTAS_X_PAGAR" Type="Self.TBL_CUENTAS_X_PAGAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_DEUDORES">
+              <PropertyRef Name="DeudorID" />
+            </Principal>
+            <Dependent Role="TBL_CUENTAS_X_PAGAR">
+              <PropertyRef Name="DeudorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_FACTURA_DETALLE_TBL_FACTURAS">
+          <End Role="TBL_FACTURAS" Type="Self.TBL_FACTURAS" Multiplicity="1" />
+          <End Role="TBL_FACTURA_DETALLE" Type="Self.TBL_FACTURA_DETALLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_FACTURAS">
+              <PropertyRef Name="FacturaID" />
+            </Principal>
+            <Dependent Role="TBL_FACTURA_DETALLE">
+              <PropertyRef Name="FacturaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_FACTURAS_TBL_CLIENTES">
+          <End Role="TBL_CLIENTES" Type="Self.TBL_CLIENTES" Multiplicity="1" />
+          <End Role="TBL_FACTURAS" Type="Self.TBL_FACTURAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_CLIENTES">
+              <PropertyRef Name="CedulaCliente" />
+            </Principal>
+            <Dependent Role="TBL_FACTURAS">
+              <PropertyRef Name="CedulaCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_FACTURAS_TBL_USUARIOS">
+          <End Role="TBL_USUARIOS" Type="Self.TBL_USUARIOS" Multiplicity="1" />
+          <End Role="TBL_FACTURAS" Type="Self.TBL_FACTURAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_USUARIOS">
+              <PropertyRef Name="UsuarioID" />
+            </Principal>
+            <Dependent Role="TBL_FACTURAS">
+              <PropertyRef Name="UsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_PRODUCTOS_TBL_SUPLIDORES">
+          <End Role="TBL_SUPLIDORES" Type="Self.TBL_SUPLIDORES" Multiplicity="1" />
+          <End Role="TBL_PRODUCTOS" Type="Self.TBL_PRODUCTOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_SUPLIDORES">
+              <PropertyRef Name="SuplidorID" />
+            </Principal>
+            <Dependent Role="TBL_PRODUCTOS">
+              <PropertyRef Name="SuplidorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES">
+          <End Role="TBL_TIPOSUPLIDORES" Type="Self.TBL_TIPOSUPLIDORES" Multiplicity="1" />
+          <End Role="TBL_SUPLIDORES" Type="Self.TBL_SUPLIDORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_TIPOSUPLIDORES">
+              <PropertyRef Name="TipoID" />
+            </Principal>
+            <Dependent Role="TBL_SUPLIDORES">
+              <PropertyRef Name="TipoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="ACTIVEUSER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="INACTIVEUSER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="PRODUCT_SOLD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="productID" Type="nvarchar" Mode="In" />
+          <Parameter Name="amount" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="MuebleriaDBModelStoreContainer">
+          <EntitySet Name="TBL_CLIENTES" EntityType="Self.TBL_CLIENTES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_CUENTAS_X_PAGAR" EntityType="Self.TBL_CUENTAS_X_PAGAR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_DEUDORES" EntityType="Self.TBL_DEUDORES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_FACTURA_DETALLE" EntityType="Self.TBL_FACTURA_DETALLE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_FACTURAS" EntityType="Self.TBL_FACTURAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_PRODUCTOS" EntityType="Self.TBL_PRODUCTOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_SUPLIDORES" EntityType="Self.TBL_SUPLIDORES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_TIPOSUPLIDORES" EntityType="Self.TBL_TIPOSUPLIDORES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_USUARIOS" EntityType="Self.TBL_USUARIOS" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES" Association="Self.FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES">
+            <End Role="TBL_DEUDORES" EntitySet="TBL_DEUDORES" />
+            <End Role="TBL_CUENTAS_X_PAGAR" EntitySet="TBL_CUENTAS_X_PAGAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_FACTURA_DETALLE_TBL_FACTURAS" Association="Self.FK_TBL_FACTURA_DETALLE_TBL_FACTURAS">
+            <End Role="TBL_FACTURAS" EntitySet="TBL_FACTURAS" />
+            <End Role="TBL_FACTURA_DETALLE" EntitySet="TBL_FACTURA_DETALLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_FACTURAS_TBL_CLIENTES" Association="Self.FK_TBL_FACTURAS_TBL_CLIENTES">
+            <End Role="TBL_CLIENTES" EntitySet="TBL_CLIENTES" />
+            <End Role="TBL_FACTURAS" EntitySet="TBL_FACTURAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_FACTURAS_TBL_USUARIOS" Association="Self.FK_TBL_FACTURAS_TBL_USUARIOS">
+            <End Role="TBL_USUARIOS" EntitySet="TBL_USUARIOS" />
+            <End Role="TBL_FACTURAS" EntitySet="TBL_FACTURAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_PRODUCTOS_TBL_SUPLIDORES" Association="Self.FK_TBL_PRODUCTOS_TBL_SUPLIDORES">
+            <End Role="TBL_SUPLIDORES" EntitySet="TBL_SUPLIDORES" />
+            <End Role="TBL_PRODUCTOS" EntitySet="TBL_PRODUCTOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES" Association="Self.FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES">
+            <End Role="TBL_TIPOSUPLIDORES" EntitySet="TBL_TIPOSUPLIDORES" />
+            <End Role="TBL_SUPLIDORES" EntitySet="TBL_SUPLIDORES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MuebleriaDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MuebleriaDBEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="ACTIVEUSER">
+          <Parameter Name="userId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="INACTIVEUSER">
+          <Parameter Name="userId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="PRODUCT_SOLD">
+            <Parameter Name="productID" Mode="In" Type="String" />
+            <Parameter Name="amount" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GET_BILLS_DETAILS_A_DAY" ReturnType="Collection(MuebleriaDBModel.GET_BILLS_DETAILS_A_DAY_Result)">
+          <Parameter Name="DATE1" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="TBL_CLIENTES" EntityType="MuebleriaDBModel.TBL_CLIENTES" />
+          <EntitySet Name="TBL_CUENTAS_X_PAGAR" EntityType="MuebleriaDBModel.TBL_CUENTAS_X_PAGAR" />
+          <EntitySet Name="TBL_DEUDORES" EntityType="MuebleriaDBModel.TBL_DEUDORES" />
+          <EntitySet Name="TBL_FACTURA_DETALLE" EntityType="MuebleriaDBModel.TBL_FACTURA_DETALLE" />
+          <EntitySet Name="TBL_FACTURAS" EntityType="MuebleriaDBModel.TBL_FACTURAS" />
+          <EntitySet Name="TBL_PRODUCTOS" EntityType="MuebleriaDBModel.TBL_PRODUCTOS" />
+          <EntitySet Name="TBL_SUPLIDORES" EntityType="MuebleriaDBModel.TBL_SUPLIDORES" />
+          <EntitySet Name="TBL_TIPOSUPLIDORES" EntityType="MuebleriaDBModel.TBL_TIPOSUPLIDORES" />
+          <EntitySet Name="TBL_USUARIOS" EntityType="MuebleriaDBModel.TBL_USUARIOS" />
+          <AssociationSet Name="FK_TBL_FACTURAS_TBL_CLIENTES" Association="MuebleriaDBModel.FK_TBL_FACTURAS_TBL_CLIENTES">
+            <End Role="TBL_CLIENTES" EntitySet="TBL_CLIENTES" />
+            <End Role="TBL_FACTURAS" EntitySet="TBL_FACTURAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES" Association="MuebleriaDBModel.FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES">
+            <End Role="TBL_DEUDORES" EntitySet="TBL_DEUDORES" />
+            <End Role="TBL_CUENTAS_X_PAGAR" EntitySet="TBL_CUENTAS_X_PAGAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_FACTURA_DETALLE_TBL_FACTURAS" Association="MuebleriaDBModel.FK_TBL_FACTURA_DETALLE_TBL_FACTURAS">
+            <End Role="TBL_FACTURAS" EntitySet="TBL_FACTURAS" />
+            <End Role="TBL_FACTURA_DETALLE" EntitySet="TBL_FACTURA_DETALLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_FACTURAS_TBL_USUARIOS" Association="MuebleriaDBModel.FK_TBL_FACTURAS_TBL_USUARIOS">
+            <End Role="TBL_USUARIOS" EntitySet="TBL_USUARIOS" />
+            <End Role="TBL_FACTURAS" EntitySet="TBL_FACTURAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_PRODUCTOS_TBL_SUPLIDORES" Association="MuebleriaDBModel.FK_TBL_PRODUCTOS_TBL_SUPLIDORES">
+            <End Role="TBL_SUPLIDORES" EntitySet="TBL_SUPLIDORES" />
+            <End Role="TBL_PRODUCTOS" EntitySet="TBL_PRODUCTOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES" Association="MuebleriaDBModel.FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES">
+            <End Role="TBL_TIPOSUPLIDORES" EntitySet="TBL_TIPOSUPLIDORES" />
+            <End Role="TBL_SUPLIDORES" EntitySet="TBL_SUPLIDORES" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="GET_BILLS_DETAILS_A_DAY_Result">
+          <Property Type="Int32" Name="FacturaID" Nullable="false" />
+          <Property Type="String" Name="CodigoDeBarra" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="NombreProducto" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Cantidad" Nullable="false" />
+          <Property Type="DateTime" Name="FechaFactura" Nullable="true" />
+          <Property Type="Decimal" Name="PrecioConDescuento" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="Ganancias" Nullable="true" Precision="19" />
+        </ComplexType>
+        <EntityType Name="TBL_CLIENTES">
+          <Key>
+            <PropertyRef Name="CedulaCliente" />
+          </Key>
+          <Property Name="CedulaCliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RNC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Direccion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_FACTURAS" Relationship="MuebleriaDBModel.FK_TBL_FACTURAS_TBL_CLIENTES" FromRole="TBL_CLIENTES" ToRole="TBL_FACTURAS" />
+        </EntityType>
+        <EntityType Name="TBL_CUENTAS_X_PAGAR">
+          <Key>
+            <PropertyRef Name="CxPID" />
+          </Key>
+          <Property Name="CxPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConceptoDeuda" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MontoAPagar" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="DeudorID" Type="Int32" Nullable="false" />
+          <Property Name="NombreDeudor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EstadoDeuda" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FechaDeuda" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="TBL_DEUDORES" Relationship="MuebleriaDBModel.FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES" FromRole="TBL_CUENTAS_X_PAGAR" ToRole="TBL_DEUDORES" />
+        </EntityType>
+        <EntityType Name="TBL_DEUDORES">
+          <Key>
+            <PropertyRef Name="DeudorID" />
+          </Key>
+          <Property Name="DeudorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telefono" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NombreContacto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_CUENTAS_X_PAGAR" Relationship="MuebleriaDBModel.FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES" FromRole="TBL_DEUDORES" ToRole="TBL_CUENTAS_X_PAGAR" />
+        </EntityType>
+        <EntityType Name="TBL_FACTURA_DETALLE">
+          <Key>
+            <PropertyRef Name="DetalleID" />
+          </Key>
+          <Property Name="DetalleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FacturaID" Type="Int32" Nullable="false" />
+          <Property Name="CodigoDeBarra" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NombreProducto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <Property Name="PrecioPorCantidad" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Descuento" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="PrecioConDescuento" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <NavigationProperty Name="TBL_FACTURAS" Relationship="MuebleriaDBModel.FK_TBL_FACTURA_DETALLE_TBL_FACTURAS" FromRole="TBL_FACTURA_DETALLE" ToRole="TBL_FACTURAS" />
+        </EntityType>
+        <EntityType Name="TBL_FACTURAS">
+          <Key>
+            <PropertyRef Name="FacturaID" />
+          </Key>
+          <Property Name="FacturaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaFactura" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TotalEnFactura" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="CedulaCliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+          <Property Name="NombreCliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NombreUsuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_CLIENTES" Relationship="MuebleriaDBModel.FK_TBL_FACTURAS_TBL_CLIENTES" FromRole="TBL_FACTURAS" ToRole="TBL_CLIENTES" />
+          <NavigationProperty Name="TBL_FACTURA_DETALLE" Relationship="MuebleriaDBModel.FK_TBL_FACTURA_DETALLE_TBL_FACTURAS" FromRole="TBL_FACTURAS" ToRole="TBL_FACTURA_DETALLE" />
+          <NavigationProperty Name="TBL_USUARIOS" Relationship="MuebleriaDBModel.FK_TBL_FACTURAS_TBL_USUARIOS" FromRole="TBL_FACTURAS" ToRole="TBL_USUARIOS" />
+        </EntityType>
+        <EntityType Name="TBL_PRODUCTOS">
+          <Key>
+            <PropertyRef Name="ProductoID" />
+          </Key>
+          <Property Name="ProductoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodigoDeBarra" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SuplidorID" Type="Int32" Nullable="false" />
+          <Property Name="ProductoNombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PrecioPorUnidad" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="UnidadesEnAlmacen" Type="Int32" Nullable="false" />
+          <Property Name="Descontinuado" Type="Int32" Nullable="false" />
+          <Property Name="Marca" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FechaDeIngreso" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SuplidorNombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrecioDeLista" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="FechaDeCompra" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="TBL_SUPLIDORES" Relationship="MuebleriaDBModel.FK_TBL_PRODUCTOS_TBL_SUPLIDORES" FromRole="TBL_PRODUCTOS" ToRole="TBL_SUPLIDORES" />
+        </EntityType>
+        <EntityType Name="TBL_SUPLIDORES">
+          <Key>
+            <PropertyRef Name="SuplidorID" />
+          </Key>
+          <Property Name="SuplidorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreSuplidor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Direccion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ciudad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NumeroTelefono" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NombreDeContacto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TelefonoDeContacto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TituloDeContacto" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TipoID" Type="Int32" Nullable="false" />
+          <Property Name="TipoNombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_PRODUCTOS" Relationship="MuebleriaDBModel.FK_TBL_PRODUCTOS_TBL_SUPLIDORES" FromRole="TBL_SUPLIDORES" ToRole="TBL_PRODUCTOS" />
+          <NavigationProperty Name="TBL_TIPOSUPLIDORES" Relationship="MuebleriaDBModel.FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES" FromRole="TBL_SUPLIDORES" ToRole="TBL_TIPOSUPLIDORES" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaginaWeb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBL_TIPOSUPLIDORES">
+          <Key>
+            <PropertyRef Name="TipoID" />
+          </Key>
+          <Property Name="TipoID" Type="Int32" Nullable="false" />
+          <Property Name="NombreTipo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TBL_SUPLIDORES" Relationship="MuebleriaDBModel.FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES" FromRole="TBL_TIPOSUPLIDORES" ToRole="TBL_SUPLIDORES" />
+        </EntityType>
+        <EntityType Name="TBL_USUARIOS">
+          <Key>
+            <PropertyRef Name="UsuarioID" />
+          </Key>
+          <Property Name="UsuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreUsuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Contraseña" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FechaDeCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ActivoAhora" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TBL_FACTURAS" Relationship="MuebleriaDBModel.FK_TBL_FACTURAS_TBL_USUARIOS" FromRole="TBL_USUARIOS" ToRole="TBL_FACTURAS" />
+        </EntityType>
+        <Association Name="FK_TBL_FACTURAS_TBL_CLIENTES">
+          <End Type="MuebleriaDBModel.TBL_CLIENTES" Role="TBL_CLIENTES" Multiplicity="1" />
+          <End Type="MuebleriaDBModel.TBL_FACTURAS" Role="TBL_FACTURAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_CLIENTES">
+              <PropertyRef Name="CedulaCliente" />
+            </Principal>
+            <Dependent Role="TBL_FACTURAS">
+              <PropertyRef Name="CedulaCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES">
+          <End Type="MuebleriaDBModel.TBL_DEUDORES" Role="TBL_DEUDORES" Multiplicity="1" />
+          <End Type="MuebleriaDBModel.TBL_CUENTAS_X_PAGAR" Role="TBL_CUENTAS_X_PAGAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_DEUDORES">
+              <PropertyRef Name="DeudorID" />
+            </Principal>
+            <Dependent Role="TBL_CUENTAS_X_PAGAR">
+              <PropertyRef Name="DeudorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_FACTURA_DETALLE_TBL_FACTURAS">
+          <End Type="MuebleriaDBModel.TBL_FACTURAS" Role="TBL_FACTURAS" Multiplicity="1" />
+          <End Type="MuebleriaDBModel.TBL_FACTURA_DETALLE" Role="TBL_FACTURA_DETALLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_FACTURAS">
+              <PropertyRef Name="FacturaID" />
+            </Principal>
+            <Dependent Role="TBL_FACTURA_DETALLE">
+              <PropertyRef Name="FacturaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_FACTURAS_TBL_USUARIOS">
+          <End Type="MuebleriaDBModel.TBL_USUARIOS" Role="TBL_USUARIOS" Multiplicity="1" />
+          <End Type="MuebleriaDBModel.TBL_FACTURAS" Role="TBL_FACTURAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_USUARIOS">
+              <PropertyRef Name="UsuarioID" />
+            </Principal>
+            <Dependent Role="TBL_FACTURAS">
+              <PropertyRef Name="UsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_PRODUCTOS_TBL_SUPLIDORES">
+          <End Type="MuebleriaDBModel.TBL_SUPLIDORES" Role="TBL_SUPLIDORES" Multiplicity="1" />
+          <End Type="MuebleriaDBModel.TBL_PRODUCTOS" Role="TBL_PRODUCTOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_SUPLIDORES">
+              <PropertyRef Name="SuplidorID" />
+            </Principal>
+            <Dependent Role="TBL_PRODUCTOS">
+              <PropertyRef Name="SuplidorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES">
+          <End Type="MuebleriaDBModel.TBL_TIPOSUPLIDORES" Role="TBL_TIPOSUPLIDORES" Multiplicity="1" />
+          <End Type="MuebleriaDBModel.TBL_SUPLIDORES" Role="TBL_SUPLIDORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_TIPOSUPLIDORES">
+              <PropertyRef Name="TipoID" />
+            </Principal>
+            <Dependent Role="TBL_SUPLIDORES">
+              <PropertyRef Name="TipoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MuebleriaDBModelStoreContainer" CdmEntityContainer="MuebleriaDBEntities">
+          <FunctionImportMapping FunctionImportName="ACTIVEUSER" FunctionName="MuebleriaDBModel.Store.ACTIVEUSER" />
+          <FunctionImportMapping FunctionImportName="INACTIVEUSER" FunctionName="MuebleriaDBModel.Store.INACTIVEUSER" />
+          <FunctionImportMapping FunctionImportName="PRODUCT_SOLD" FunctionName="MuebleriaDBModel.Store.PRODUCT_SOLD" />
+          <EntitySetMapping Name="TBL_CLIENTES">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_CLIENTES">
+              <MappingFragment StoreEntitySet="TBL_CLIENTES">
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="RNC" ColumnName="RNC" />
+                <ScalarProperty Name="CedulaCliente" ColumnName="CedulaCliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_CUENTAS_X_PAGAR">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_CUENTAS_X_PAGAR">
+              <MappingFragment StoreEntitySet="TBL_CUENTAS_X_PAGAR">
+                <ScalarProperty Name="FechaDeuda" ColumnName="FechaDeuda" />
+                <ScalarProperty Name="EstadoDeuda" ColumnName="EstadoDeuda" />
+                <ScalarProperty Name="NombreDeudor" ColumnName="NombreDeudor" />
+                <ScalarProperty Name="DeudorID" ColumnName="DeudorID" />
+                <ScalarProperty Name="MontoAPagar" ColumnName="MontoAPagar" />
+                <ScalarProperty Name="ConceptoDeuda" ColumnName="ConceptoDeuda" />
+                <ScalarProperty Name="CxPID" ColumnName="CxPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_DEUDORES">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_DEUDORES">
+              <MappingFragment StoreEntitySet="TBL_DEUDORES">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="NombreContacto" ColumnName="NombreContacto" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="DeudorID" ColumnName="DeudorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_FACTURA_DETALLE">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_FACTURA_DETALLE">
+              <MappingFragment StoreEntitySet="TBL_FACTURA_DETALLE">
+                <ScalarProperty Name="PrecioConDescuento" ColumnName="PrecioConDescuento" />
+                <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+                <ScalarProperty Name="PrecioPorCantidad" ColumnName="PrecioPorCantidad" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="CodigoDeBarra" ColumnName="CodigoDeBarra" />
+                <ScalarProperty Name="FacturaID" ColumnName="FacturaID" />
+                <ScalarProperty Name="DetalleID" ColumnName="DetalleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_FACTURAS">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_FACTURAS">
+              <MappingFragment StoreEntitySet="TBL_FACTURAS">
+                <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+                <ScalarProperty Name="CedulaCliente" ColumnName="CedulaCliente" />
+                <ScalarProperty Name="TotalEnFactura" ColumnName="TotalEnFactura" />
+                <ScalarProperty Name="FechaFactura" ColumnName="FechaFactura" />
+                <ScalarProperty Name="FacturaID" ColumnName="FacturaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_PRODUCTOS">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_PRODUCTOS">
+              <MappingFragment StoreEntitySet="TBL_PRODUCTOS">
+                <ScalarProperty Name="FechaDeCompra" ColumnName="FechaDeCompra" />
+                <ScalarProperty Name="PrecioDeLista" ColumnName="PrecioDeLista" />
+                <ScalarProperty Name="SuplidorNombre" ColumnName="SuplidorNombre" />
+                <ScalarProperty Name="FechaDeIngreso" ColumnName="FechaDeIngreso" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Descontinuado" ColumnName="Descontinuado" />
+                <ScalarProperty Name="UnidadesEnAlmacen" ColumnName="UnidadesEnAlmacen" />
+                <ScalarProperty Name="PrecioPorUnidad" ColumnName="PrecioPorUnidad" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="ProductoNombre" ColumnName="ProductoNombre" />
+                <ScalarProperty Name="SuplidorID" ColumnName="SuplidorID" />
+                <ScalarProperty Name="CodigoDeBarra" ColumnName="CodigoDeBarra" />
+                <ScalarProperty Name="ProductoID" ColumnName="ProductoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_SUPLIDORES">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_SUPLIDORES">
+              <MappingFragment StoreEntitySet="TBL_SUPLIDORES">
+                <ScalarProperty Name="PaginaWeb" ColumnName="PaginaWeb" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="TipoNombre" ColumnName="TipoNombre" />
+                <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+                <ScalarProperty Name="TituloDeContacto" ColumnName="TituloDeContacto" />
+                <ScalarProperty Name="TelefonoDeContacto" ColumnName="TelefonoDeContacto" />
+                <ScalarProperty Name="NombreDeContacto" ColumnName="NombreDeContacto" />
+                <ScalarProperty Name="NumeroTelefono" ColumnName="NumeroTelefono" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="NombreSuplidor" ColumnName="NombreSuplidor" />
+                <ScalarProperty Name="SuplidorID" ColumnName="SuplidorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_TIPOSUPLIDORES">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_TIPOSUPLIDORES">
+              <MappingFragment StoreEntitySet="TBL_TIPOSUPLIDORES">
+                <ScalarProperty Name="NombreTipo" ColumnName="NombreTipo" />
+                <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_USUARIOS">
+            <EntityTypeMapping TypeName="MuebleriaDBModel.TBL_USUARIOS">
+              <MappingFragment StoreEntitySet="TBL_USUARIOS">
+                <ScalarProperty Name="ActivoAhora" ColumnName="ActivoAhora" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="FechaDeCreacion" ColumnName="FechaDeCreacion" />
+                <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

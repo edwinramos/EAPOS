@@ -1,0 +1,84 @@
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe.config
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.pdb
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\EntityFramework.dll
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\bin\Debug\EntityFramework.xml
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csprojResolveAssemblyReference.cache
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.InventoryManagement.resources
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.UserManagement.resources
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.LogIn.resources
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.MainMenu.resources
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Properties.Resources.resources
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.GenerateResource.Cache
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.exe
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.pdb
+C:\Users\Edwin\Documents\Visual Studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.PointOfSale.resources
+C:\Users\Edwin\documents\visual studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\RdlCompile.cache
+C:\Users\Edwin\documents\visual studio 2012\Projects\Punto de Venta\Punto de Venta\obj\Debug\RdlCompile.compiled
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe.config
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.pdb
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\EntityFramework.dll
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\EntityFramework.xml
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csprojResolveAssemblyReference.cache
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.InventoryManagement.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.PointOfSale.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.UserManagement.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.LogIn.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.MainMenu.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Properties.Resources.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.GenerateResource.Cache
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\RdlCompile.cache
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\RdlCompile.compiled
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.exe
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.pdb
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.SupplierManagement.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.ClientManagement.resources
+<<<<<<< HEAD
+C:\Users\Administrator\Documents\PROYECTOS\Punto de Venta\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe.config
+C:\Users\Administrator\Documents\PROYECTOS\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.exe
+C:\Users\Administrator\Documents\PROYECTOS\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.pdb
+=======
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.CuentasPorPagar.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.CuentasPorCobrar.resources
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.DeudorManagement.resources
+>>>>>>> 4f7ff82af65e380610a21a0f7bb5e2e17aa4ef0b
+C:\Users\Edwin\Documents\Punto de Venta\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.About.resources
+C:\Users\AbrahamE\Dropbox\IT Solutions Projects\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe.config
+C:\Users\AbrahamE\Dropbox\IT Solutions Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.exe
+C:\Users\AbrahamE\Dropbox\IT Solutions Projects\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.pdb
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe.config
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.exe
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.pdb
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.pdb
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Entity.dll
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Library.dll
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Entity.pdb
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\PuntoDeVenta.Library.pdb
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.About.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.ClientManagement.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.CuentasPorCobrar.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.CuentasPorPagar.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.DeudorManagement.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.InventoryManagement.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.PointOfSale.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.SupplierManagement.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.UserManagement.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.LogIn.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Forms.MainMenu.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Properties.Resources.resources
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\RdlCompile.cache
+C:\Users\Administrator\Documents\Punto de Venta\Punto de Venta\obj\Debug\RdlCompile.compiled

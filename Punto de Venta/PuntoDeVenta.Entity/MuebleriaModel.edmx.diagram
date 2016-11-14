@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6345f6994ffd4ef7a30d476f24cb810f" Name="Diagram1">
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_CLIENTES" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_CUENTAS_X_PAGAR" Width="1.5" PointX="10" PointY="1" />
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_DEUDORES" Width="1.5" PointX="7.75" PointY="1.125" />
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_FACTURA_DETALLE" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_FACTURAS" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_PRODUCTOS" Width="1.5" PointX="7.25" PointY="5" />
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_SUPLIDORES" Width="1.5" PointX="5" PointY="5.125" />
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_TIPOSUPLIDORES" Width="1.5" PointX="2.75" PointY="6.125" />
+        <EntityTypeShape EntityType="MuebleriaDBModel.TBL_USUARIOS" Width="1.5" PointX="0.75" PointY="1.125" />
+        <AssociationConnector Association="MuebleriaDBModel.FK_TBL_FACTURAS_TBL_CLIENTES" />
+        <AssociationConnector Association="MuebleriaDBModel.FK_TBL_CUENTAS_X_PAGAR_TBL_DEUDORES" />
+        <AssociationConnector Association="MuebleriaDBModel.FK_TBL_FACTURA_DETALLE_TBL_FACTURAS" />
+        <AssociationConnector Association="MuebleriaDBModel.FK_TBL_FACTURAS_TBL_USUARIOS" />
+        <AssociationConnector Association="MuebleriaDBModel.FK_TBL_PRODUCTOS_TBL_SUPLIDORES" />
+        <AssociationConnector Association="MuebleriaDBModel.FK_TBL_SUPLIDORES_TBL_TIPOSUPLIDORES" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

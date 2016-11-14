@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D5BF296-A9F4-47BD-9014-633E54B5828A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Punto_de_Venta</RootNamespace>
+    <AssemblyName>Punto de Venta</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icons8-Ios7-Finance-Pos-Terminal.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientManagement.Designer.cs">
+      <DependentUpon>ClientManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CuentasPorCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CuentasPorCobrar.Designer.cs">
+      <DependentUpon>CuentasPorCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CuentasPorPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CuentasPorPagar.Designer.cs">
+      <DependentUpon>CuentasPorPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeudorManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeudorManagement.Designer.cs">
+      <DependentUpon>DeudorManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InventoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InventoryManagement.Designer.cs">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PointOfSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PointOfSale.Designer.cs">
+      <DependentUpon>PointOfSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SupplierManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SupplierManagement.Designer.cs">
+      <DependentUpon>SupplierManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\FacturaDS.cs">
+      <DependentUpon>FacturaDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\FacturaDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturaDS.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FacturaReport.rdlc" />
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientManagement.resx">
+      <DependentUpon>ClientManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CuentasPorCobrar.resx">
+      <DependentUpon>CuentasPorCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CuentasPorPagar.resx">
+      <DependentUpon>CuentasPorPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeudorManagement.resx">
+      <DependentUpon>DeudorManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InventoryManagement.resx">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PointOfSale.resx">
+      <DependentUpon>PointOfSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SupplierManagement.resx">
+      <DependentUpon>SupplierManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_FACTURA_DETALLE.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_ORDENES.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_ORDENES_DETALLES.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_PRODUCTOS.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_SUPLIDORES.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_USUARIOS.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.CuentaXPagar.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.Factura.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.FacturaDetalle.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.Producto.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.ProductoFantasma.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.Suplidor.datasource" />
+    <None Include="Properties\DataSources\Punto_de_Venta.Forms.InventoryManagement.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\FacturaDS.xsc">
+      <DependentUpon>FacturaDS.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\FacturaDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacturaDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\FacturaDS.xss">
+      <DependentUpon>FacturaDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PuntoDeVenta.Entity\PuntoDeVenta.Entity.csproj">
+      <Project>{47b07651-58f5-4886-b4ce-2a4cc8ef4fad}</Project>
+      <Name>PuntoDeVenta.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PuntoDeVenta.Library\PuntoDeVenta.Library.csproj">
+      <Project>{96479841-f6ac-4462-8f80-75662d07b9d5}</Project>
+      <Name>PuntoDeVenta.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons8-Ios7-Finance-Pos-Terminal.ico" />
+    <Content Include="Resources\Frederich Comercial.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

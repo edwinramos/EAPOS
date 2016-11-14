@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D5BF296-A9F4-47BD-9014-633E54B5828A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Punto_de_Venta</RootNamespace>
+    <AssemblyName>EA POS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Edwin\Desktop\Abraham\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>point-of-sale-128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C195E96ED3D0E3B3A30F52B6D7E0B2DF91BB47A0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PuntoDeVenta_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Details\frmProductoDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Details\frmProductoDetails.Designer.cs">
+      <DependentUpon>frmProductoDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FilteringWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FilteringWindow.Designer.cs">
+      <DependentUpon>FilteringWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClientManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClientManagement.Designer.cs">
+      <DependentUpon>frmClientManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCuentasPorCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCuentasPorCobrar.Designer.cs">
+      <DependentUpon>frmCuentasPorCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCuentasPorPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCuentasPorPagar.Designer.cs">
+      <DependentUpon>frmCuentasPorPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeudorManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeudorManagement.Designer.cs">
+      <DependentUpon>frmDeudorManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFewProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFewProducts.Designer.cs">
+      <DependentUpon>frmFewProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInventoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInventoryManagement.Designer.cs">
+      <DependentUpon>frmInventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPointOfSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPointOfSale.Designer.cs">
+      <DependentUpon>frmPointOfSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Details\frmSuplidorDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Details\frmSuplidorDetails.designer.cs">
+      <DependentUpon>frmSuplidorDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSupplierManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSupplierManagement.Designer.cs">
+      <DependentUpon>frmSupplierManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserManagement.Designer.cs">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\FacturaDS.cs">
+      <DependentUpon>FacturaDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\FacturaDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturaDS.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FacturaReport.rdlc" />
+    <EmbeddedResource Include="Forms\Details\frmProductoDetails.resx">
+      <DependentUpon>frmProductoDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FilteringWindow.resx">
+      <DependentUpon>FilteringWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClientManagement.resx">
+      <DependentUpon>frmClientManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCuentasPorCobrar.resx">
+      <DependentUpon>frmCuentasPorCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCuentasPorPagar.resx">
+      <DependentUpon>frmCuentasPorPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeudorManagement.resx">
+      <DependentUpon>frmDeudorManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFewProducts.resx">
+      <DependentUpon>frmFewProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInventoryManagement.resx">
+      <DependentUpon>frmInventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPointOfSale.resx">
+      <DependentUpon>frmPointOfSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Details\frmSuplidorDetails.resx">
+      <DependentUpon>frmSuplidorDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSupplierManagement.resx">
+      <DependentUpon>frmSupplierManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserManagement.resx">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_FACTURA_DETALLE.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_ORDENES.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_ORDENES_DETALLES.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_PRODUCTOS.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_SUPLIDORES.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Entity.TBL_USUARIOS.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.CuentaXPagar.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.Factura.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.FacturaDetalle.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.Producto.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.ProductoFantasma.datasource" />
+    <None Include="Properties\DataSources\PuntoDeVenta.Library.Entity_Classes.Suplidor.datasource" />
+    <None Include="Properties\DataSources\Punto_de_Venta.Forms.InventoryManagement.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="PuntoDeVenta_TemporaryKey.pfx" />
+    <None Include="Resources\FacturaDS.xsc">
+      <DependentUpon>FacturaDS.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\FacturaDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FacturaDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\FacturaDS.xss">
+      <DependentUpon>FacturaDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PuntoDeVenta.Entity\PuntoDeVenta.Entity.csproj">
+      <Project>{47b07651-58f5-4886-b4ce-2a4cc8ef4fad}</Project>
+      <Name>PuntoDeVenta.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PuntoDeVenta.Library\PuntoDeVenta.Library.csproj">
+      <Project>{96479841-f6ac-4462-8f80-75662d07b9d5}</Project>
+      <Name>PuntoDeVenta.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="point-of-sale-128.ico" />
+    <Content Include="Resources\Frederich Comercial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
